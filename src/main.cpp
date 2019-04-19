@@ -6,6 +6,8 @@
 #include "lodepng.h"
 #include "Point.h"
 
+#include "Image.h"
+
 
 int main() {
 
