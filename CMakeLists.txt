@@ -23,6 +23,6 @@ endif()
 # don't use -Weffc++ for include sources
 set_source_files_properties(${INCLUDE_SOURCES} PROPERTIES COMPILE_FLAGS -Wno-effc++)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${INCLUDE_SOURCES})

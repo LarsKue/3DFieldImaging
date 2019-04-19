@@ -4,11 +4,16 @@
 
 #include <iostream>
 #include "lodepng.h"
+#include "Point.h"
 
 
 int main() {
 
-    std::cout << "Hello, World!" << std::endl;
+    Point p1(0.0, 3.0, 4.0);
+
+    Point p2(0, 0, 0);
+
+    std::cout << p1.sq_distance_to(p2) << std::endl;
 
     return 0;
 }
