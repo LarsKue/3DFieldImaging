@@ -4,18 +4,18 @@
 
 #include <iostream>
 #include "lodepng.h"
-#include "Point.h"
+#include "Vec3.h"
 
 #include "Image.h"
+
+#include "Camera.h"
 
 
 int main() {
 
-    Point p1(0.0, 3.0, 4.0);
+    Camera c({0, 0, 0}, {3, 3, 3});
 
-    Point p2(0, 0, 0);
-
-    std::cout << p1.sq_distance_to(p2) << std::endl;
+    std::cout << c.is_in_view({1, 1, 1});
 
     return 0;
 }
