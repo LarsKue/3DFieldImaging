@@ -17,6 +17,12 @@ struct Vec3 {
     Vec3() = default;
     Vec3(value_type mX, value_type mY, value_type mZ) : x(mX), y(mY), z(mZ) {}
 
+    /// Conversion Operator ///
+    template<typename NewType>
+    constexpr explicit operator Vec3<NewType>() const {
+        return Vec3<NewType>(static_cast<NewType>(x), static_cast<NewType>(y), static_cast<NewType>(z));
+    }
+
     /// Operators ///
 
     Vec3<value_type> operator+() const {
@@ -94,6 +100,12 @@ struct Vec3 {
         Vec3<value_type> result = *this;
         result *= other;
         return result;
+    }
+
+    // commutative
+    template<typename ovt>
+    friend Vec3<value_type> operator*(const ovt& other, const Vec3& vec) {
+        return vec * other;
     }
 
     // vectorial division does not exist

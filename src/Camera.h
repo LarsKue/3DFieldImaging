@@ -5,10 +5,9 @@
 #ifndef INC_3DFIELDIMAGING_CAMERA_H
 #define INC_3DFIELDIMAGING_CAMERA_H
 
-#include "Vec3.h"
+#include <cstddef> // size_t
 
-template<typename value_type>
-struct Vec3;
+#include "Vec3.h"
 
 struct Camera {
 

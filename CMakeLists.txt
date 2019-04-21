@@ -20,7 +20,7 @@ else()
     add_compile_options(-O2)
 endif()
 
-# don't use -Weffc++ for include sources
+# don't use -Weffc++ and -Werror for include sources
 set_source_files_properties(${INCLUDE_SOURCES} PROPERTIES COMPILE_FLAGS -Wno-effc++)
 
 set(CMAKE_CXX_STANDARD 17)

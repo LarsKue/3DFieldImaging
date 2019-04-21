@@ -25,7 +25,7 @@ namespace {
 }
 
 bool Camera::is_in_view(Vec3<> vec) {
-    // Coordinate transform the origin to the convergence point of the camera
+    // Coordinate transform the convergence point of the camera to the origin
     // and then check if the spherical coordinates work out
     Vec3<> tr_origin = convergence_point();
     Vec3<> tr_pos = position - tr_origin;

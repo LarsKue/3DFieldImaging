@@ -10,6 +10,10 @@
 
 #include "Camera.h"
 
+#include "PointCharge.h"
+
+#include "ElectricField.h"
+
 
 int main() {
 
